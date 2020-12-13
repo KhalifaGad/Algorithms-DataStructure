@@ -1,13 +1,13 @@
 function merge(arr) {
   arr = arr.map((el) => [el]);
-  let sortedArr = [];
+  let wrapperArr = [];
 
-  while (sortedArr.length != 1) {
-    sortedArr = [];
+  while (wrapperArr.length != 1) { 
+    wrapperArr = [];
     for (let i = 0; i < arr.length; i += 2) {
-      sortedArr.push(arrange(arr[i], arr[i + 1]));
+      wrapperArr.push(arrange(arr[i], arr[i + 1]));
     }
-    arr = sortedArr;
+    arr = wrapperArr;
   }
   return arr[0];
 }
@@ -30,3 +30,14 @@ function arrange(arr1, arr2) {
 
 let arr = [52, 37, 63, 14, 17, 8, 6, 25];
 console.log(merge(arr));
+
+
+
+
+/* 
+[52, 37, 63, 14, 17, 8, 6, 25] => [52, 37, 63, 14, 17, 8, [6], [25]]
+
+
+*/
+
+
