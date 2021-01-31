@@ -26,6 +26,7 @@ class BinaryTree {
           currentNode = currentNode.left;
         } else if (el > currentNode.value) {
           currentNode = currentNode.right;
+          
         }
       }
       if (el < previous.value) {

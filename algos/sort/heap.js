@@ -30,7 +30,6 @@ function heapSort(arr) {
     arr = heapify(arr, i);
   }
   // end of create heap
-  
   for (let i = arr.length - 1; i >= 0; i--) {
     swap(arr, 0, i);
     const removed = arr.pop();
